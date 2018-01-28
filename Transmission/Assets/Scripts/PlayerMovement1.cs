@@ -13,10 +13,6 @@ public class PlayerMovement1 : MonoBehaviour {
     private bool verticalOpen = true;
 
    
-    int jumpHash = Animator.StringToHash("Jump");
-    int runStateHash = Animator.StringToHash("Base Layer.Run");
-
-
     void Start()
     {
         anim = GetComponent<Animator>();

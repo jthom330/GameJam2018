@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Player2
+  - Enemy
+  - Melee
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -14,10 +17,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - ShipFloor
+  - Foreground
+  - UI
   - 
   - 
   - 
@@ -41,4 +44,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 259049257
+    locked: 0
+  - name: Ship
+    uniqueID: 3033727645
+    locked: 0
+  - name: Foreground
+    uniqueID: 3268250241
+    locked: 0
+  - name: UI
+    uniqueID: 4226745069
     locked: 0

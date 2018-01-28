@@ -12,12 +12,40 @@ public class ProjectileExpire : MonoBehaviour {
     }
 	
 	
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        //ContactPoint contact = collision.contacts[0];
-        //Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
-        //Vector3 pos = contact.point;
-        //Instantiate(explosionPrefab, pos, rot);
-        Destroy(gameObject);
+        if (collision.gameObject.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<EnemyHealth>().health -= 10;
+            int x = 0;
+            int y = 0;
+            if (collision.gameObject.transform.position.x < transform.position.x - .25)
+            {
+                x = -10;
+            }
+            else if (collision.gameObject.transform.position.x > transform.position.x + .25)
+            {
+                x = 10;
+            }
+
+            if (collision.gameObject.transform.position.y < transform.position.y -.25)
+            {
+                y = -10;
+            }
+            else if (collision.gameObject.transform.position.y > transform.position.y + .25)
+            {
+                y = 10;
+            }
+
+            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(x, y) * 100);
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "Obstacle")
+        {
+            
+            Destroy(gameObject);
+        }
+
     }
 }
