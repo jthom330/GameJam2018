@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement1 : MonoBehaviour {
 
     public float playerSpeed = 4f;
     public Rigidbody2D player;
@@ -24,8 +24,8 @@ public class PlayerMovement : MonoBehaviour {
 
     void FixedUpdate()
     {
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
+        float x = Input.GetAxisRaw("Joy1_Horizontal");
+        float y = Input.GetAxisRaw("Joy1_Vertical");
 
 
 

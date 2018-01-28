@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CombatActions : MonoBehaviour {
+public class CombatActions1 : MonoBehaviour {
 
     public GameObject gunDrop;
     public GameObject hammerDrop;
@@ -23,7 +23,7 @@ public class CombatActions : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update() {
-        if (Input.GetButtonDown("Fire1")) {
+        if (Input.GetButtonDown("Joy1_Fire1")) {
             if (HasWeapon()) {
                 // weapon logic
                 if (hasGun) {

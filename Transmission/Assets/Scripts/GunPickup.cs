@@ -14,7 +14,16 @@ public class GunPickup : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Player")) {
-            CombatActions playerObj = other.gameObject.GetComponent<CombatActions>();
+            CombatActions1 playerObj = other.gameObject.GetComponent<CombatActions1>();
+            if (playerObj.HasWeapon())
+                playerObj.ResetWeapon();
+            playerObj.hasGun = true;
+            playerObj.charge = charge;
+            Destroy(gameObject);
+        }
+        //crap to quickly create a player2
+        if (other.gameObject.CompareTag("Player2")) {
+            CombatActions2 playerObj = other.gameObject.GetComponent<CombatActions2>();
             if (playerObj.HasWeapon())
                 playerObj.ResetWeapon();
             playerObj.hasGun = true;
