@@ -16,6 +16,8 @@ public class EnemyMovement : MonoBehaviour {
         yPrev = transform.position.y;
 
         anim = gameObject.GetComponent<Animator>();
+
+        //gameObject.GetComponent<>();
     }
 	
 	// Update is called once per frame
