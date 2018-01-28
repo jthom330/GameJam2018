@@ -6,6 +6,7 @@ public class CombatActions1 : MonoBehaviour {
 
     public GameObject gunDrop;
     public GameObject hammerDrop;
+    public GameObject inventory;
     public Rigidbody2D projectile;
     public Transform centerPoint;
     public Transform bulletOrigin;
