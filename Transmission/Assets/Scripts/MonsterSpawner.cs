@@ -7,10 +7,22 @@ public class MonsterSpawner : MonoBehaviour {
     public GameObject[] spawners;
     public GameObject MonsterSpawn;
     public int tickSpeed = 5;
+    public GameObject enemiesParent;
+    public List<GameObject> enemies;
+
+    private int count = 0;
 
     // Use this for initialization
     void Start () {
         StartCoroutine(idle());
+
+        
+         foreach (Transform child in enemiesParent.transform)
+         {
+            
+                 enemies.Add(child.gameObject);
+             
+         }
     }
 
     // Update is called once per frame
@@ -22,7 +34,11 @@ public class MonsterSpawner : MonoBehaviour {
     {
         GameObject spawner = spawners[Random.Range(0, spawners.Length)];
         Debug.Log("Monster@spawner: "+ spawner.transform.position);
-        Instantiate(MonsterSpawn, spawner.transform.position, Quaternion.identity);
+        //Instantiate(MonsterSpawn, spawner.transform.position, Quaternion.identity);
+        GameObject x = enemies[count];
+        count++;
+        x.transform.position = spawner.transform.position;
+        x.SetActive(true);
     }
 
     void OnGUI()
