@@ -55,11 +55,11 @@ public class CombatActions1 : MonoBehaviour {
     public void ResetWeapon() {
         if (charge > 0) {
             if (hasGun) {
-                GameObject instance = Instantiate(gunDrop, centerPoint.up * 1, Quaternion.identity);
+                GameObject instance = Instantiate(gunDrop, centerPoint.up * 0.5f, Quaternion.identity);
                 instance.GetComponent<GunPickup>().charge = charge;
             }
             else if (hasHammer) {
-                GameObject instance = Instantiate(hammerDrop, centerPoint.up * 1, Quaternion.identity);
+                GameObject instance = Instantiate(hammerDrop, centerPoint.up * 0.5f, Quaternion.identity);
                 instance.GetComponent<MeleePickup>().charge = charge;
             }
         }
