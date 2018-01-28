@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  player: {fileID: 0}
+  player: {fileID: 1277034408030302, guid: ebcce2540d8aade4e9d23790475f147d, type: 2}
   canHit: 0
 --- !u!114 &114901519871983160
 MonoBehaviour:
@@ -280,7 +280,7 @@ MonoBehaviour:
   advancedInspector: 0
   FilteredEnvironments: []
   GameObjects:
-  - {fileID: 0}
+  - {fileID: 1277034408030302, guid: ebcce2540d8aade4e9d23790475f147d, type: 2}
   velocityGizmo:
     Enabled: 0
     Color: {r: 0.5, g: 0.5, b: 1, a: 1}
